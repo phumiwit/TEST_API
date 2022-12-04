@@ -6,7 +6,7 @@ from pydub import AudioSegment
 import math
 import os
 import json
-MODEL_PATH = 'D:\ML\Music_Genre_10_CNN2.h5'
+MODEL_PATH = 'Music_Genre_10_CNN2.h5'
 NUM_SAMPLES_TO_CONSIDER = 22050
 TRACK_DURATION = 30 # measured in seconds
 SAMPLES_PER_TRACK = NUM_SAMPLES_TO_CONSIDER * TRACK_DURATION
