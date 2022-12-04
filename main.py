@@ -14,6 +14,9 @@ app = FastAPI()
 # pickle_in = open("Music_genre_CNN.pkl","rb")
 # CNN = pickle.load(pickle_in)
 
+@app.get('/')
+def Hello():
+    return {'Hello':'Hello'}
 
 @app.get('/predict')
 def predict_genre(path : str):
