@@ -131,7 +131,3 @@ def Keyword_Spotting_Service():
         _Keyword_Spotting_Service.model = keras.models.load_model(MODEL_PATH)
     return _Keyword_Spotting_Service._instance
 
-if __name__ == "__main__":
-    kss = Keyword_Spotting_Service()
-    keyword1,keyword2 = kss.prediction('D:\ML\Eminem - Rap God (Explicit).wav')
-    print(f'Predicted keywords: {keyword1} :{keyword2}')
