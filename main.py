@@ -8,6 +8,7 @@ import math
 import os
 import pickle
 from keyword_spotting_service import Keyword_Spotting_Service
+import uvicorn
 
 app = FastAPI()
 # pickle_in = open("Music_genre_CNN.pkl","rb")
@@ -26,3 +27,5 @@ def value_genre(path : str):
     keyword1,keyword2 = kss.prediction(path)
     
     return keyword2
+if __name__ == "__main__":
+    uvicorn.run(app,host='127.0.0.1',port=8000)
