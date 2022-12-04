@@ -14,7 +14,7 @@ app = FastAPI()
 # CNN = pickle.load(pickle_in)
 
 
-@app.get('/')
+@app.get('/predict')
 def predict_genre(path : str):
     kss = Keyword_Spotting_Service()
     keyword1,keyword2= kss.prediction(path)
